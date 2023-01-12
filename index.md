@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 ## Index
 {{ site.description }}
 
