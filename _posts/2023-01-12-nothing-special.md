@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A post about nothing!
+title: A post about nothing
 author: tinoSwe
 date: 2023-01-12 17:52
 categories: setup
