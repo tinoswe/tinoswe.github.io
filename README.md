@@ -1,2 +1,3 @@
-# tinoswe.github.io
+# tinoswe
+
 My Jekyll site
