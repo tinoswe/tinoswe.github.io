@@ -6,8 +6,8 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <h1>{{ site.title }}</h1>
-    <h4>{{ site.subtitle }}</h4>
+    {% include title.html %}
+    {% include subtitle.html %}
     {% include navigation.html %}
     <h2>{{ page.title }}</h2>
     <section>
