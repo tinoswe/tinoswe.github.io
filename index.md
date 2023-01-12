@@ -1,6 +1,6 @@
-## Description
+## Index
 {{ site.description }}
 
-More details about the project are available from the [About page](about-me).
+More about me is available [here](about-me).
 
-Have any questions about what we do? [We'd love to hear from you!](mailto:{{ site.email }})
+Have any questions about what we do? [Get in touch](mailto:{{ site.email }})
