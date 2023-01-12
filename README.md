@@ -1,3 +1,3 @@
-# tinoswe
+# tinoSwe
 
 My Jekyll site
