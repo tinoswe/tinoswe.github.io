@@ -4,8 +4,8 @@ layout: default
 
 <strong>Author:</strong> {{ page.author }}
 <br>
-<strong>Published on:</strong> {{ page.date | date: "%Y-%m-%d" }}
+<strong>Published on:</strong> {{ page.date | date: "%B %-d, %Y" }}
 <br>
-<strong>At:</strong> {{ page.date | %H:%M"  }}
+<strong>At:</strong> {{ page.date | date: %H:%M"  }}
 
 {{ content }}
