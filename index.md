@@ -1,3 +1,7 @@
+---
+title: "Index"
+---
+
 ## Index
 {{ site.description }}
 
