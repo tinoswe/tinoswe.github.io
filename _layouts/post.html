@@ -2,6 +2,10 @@
 layout: default
 ---
 
-<strong>Author:</strong> {{ page.author }}, <strong>Published on:</strong> {{ page.date }}
+<strong>Author:</strong> {{ page.author }}
+<br>
+<strong>Published on:</strong> {{ page.date | date: "%Y-%m-%d %H:%M" }}
+<br>
+<strong>At:</strong> {{ page.date | date: "%Y-%m-%d %H:%M"  }}
 
 {{ content }}
