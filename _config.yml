@@ -2,3 +2,8 @@ title: tinoSwe
 subtitle: showcasing myself
 description: "My Jekyll site on GitHub Pages. My blog and data projects."
 email: "xx@yy.zz"
+collections:
+  blogposts:
+    output: true
+  projectsposts:
+    output: true
