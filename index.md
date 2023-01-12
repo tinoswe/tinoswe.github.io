@@ -1,5 +1,3 @@
-# tinoSwe
-
 ## Description
 {{ site.description }}
 
