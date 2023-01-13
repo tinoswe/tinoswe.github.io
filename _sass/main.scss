@@ -1,9 +1,22 @@
-body{
-  background-color: rgb(20, 20, 20);
-  color: #fff;
+body{ 
+  min-height: 100vh; 
+  margin:0; 
 }
 
-a{
-  color: rgb(2, 170, 38);
-  text-decoration: none;
+header{ 
+  min-height:50px; 
 }
+
+footer{ 
+  min-height:50px; 
+}
+
+body{ 
+  display:flex; 
+  flex-direction:column; 
+}
+
+article{ 
+  flex:1; 
+}
+
