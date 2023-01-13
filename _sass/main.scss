@@ -1,8 +1,16 @@
 body {
   background-color: rgb(20, 20, 20);
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-a{
+
+a {
   color: rgb(2, 170, 38);
   text-decoration: none;
+}
+
+footer {
+  margin-top: auto;
 }
