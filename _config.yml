@@ -5,3 +5,4 @@ email: "xx@yy.zz"
 collections:
   posts:
     output: true
+    permalink: /:collection/:name
