@@ -11,7 +11,7 @@ collections:
     output: true
     permalink: /:categories/:title
 plugins:
-  - sass-embedded
+  - jekyll-sass-converter
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
