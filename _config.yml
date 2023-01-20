@@ -10,3 +10,8 @@ collections:
 categories:
   - tech
   - tinoSwe
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
