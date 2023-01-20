@@ -8,8 +8,8 @@ layout: default
 <br>
 <strong>At:</strong> {{ page.date | date: "%H:%M"  }}
 <br>
-<strong>Categories:</strong> {{ page.categories }}
+<strong>Categories:</strong> {{ page.categories  | sort | join: ", " }}
 <br>
-<strong>Tags:</strong> {{ page.tags }}
+<strong>Tags:</strong> {{ page.tags | sort | join: ", " }}
 
 {{ content }}
