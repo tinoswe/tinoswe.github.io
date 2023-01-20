@@ -2,7 +2,11 @@ title: tinoSwe
 subtitle: Personal DevOps
 description: "My Jekyll site on GitHub Pages."
 email: "xx@yy.zz"
+future: true
 collections:
   posts:
     output: true
-    permalink: /:collection/:title
+    permalink: /:categories/:title
+categories:
+  - tech
+  - tinoSwe
