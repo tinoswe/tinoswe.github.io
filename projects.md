@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Projects
+title: projects
 ---
 
 These are my projects.

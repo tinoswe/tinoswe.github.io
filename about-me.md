@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About me
+title: about me
 ---
 
 Hi there! This is Martino.

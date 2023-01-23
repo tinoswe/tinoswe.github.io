@@ -1,4 +1,6 @@
 {% assign categories = include.path | split:"/" %}
+
+
 {% assign filename_without_extension = categories | last | split:"." | first %}
 	
 {% if categories contains "_posts" or filename_without_extension == "index" %}
@@ -7,21 +9,21 @@
 
 {% assign route="" %}
 
-<a href="{{ '/' | absolute_url }}">Home</a>
+<a href="{{ '/' | absolute_url }}">home</a>
 
 {% for category in categories %}
 
     <span class="prompt">></span>
 
     {% assign route = route | append: '/' | append: category %}
-    
+    <script>console.log('route: {{ route }}');</script>
+
     {% if forloop.last %}
         {% if include.title %}
-            {{ include.title }} 
+            {{ include.title }}  
         {% else %}
-            {{ category }} 
-    {% endif %}
-    
+            {{ category  }}
+        {% endif %}
     {% else %}
         <a href="{{ route | absolute_url }}">{{ category }}</a> 
     {% endif %}

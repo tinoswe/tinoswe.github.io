@@ -1,5 +1,5 @@
 ---
 layout: default
-title: Blog
+title: blog
 ---
 {% include post_list.html %}
