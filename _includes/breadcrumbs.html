@@ -13,10 +13,10 @@
 
 {% for category in categories %}
 
-    <span class="prompt">></span>
+    <span class="prompt">/</span>
 
     {% assign route = route | append: '/' | append: category %}
-    <script>console.log('route: {{ route }}');</script>
+    <!--<script>console.log('route: {{ route }}');</script>-->
 
     {% if forloop.last %}
         {% if include.title %}
