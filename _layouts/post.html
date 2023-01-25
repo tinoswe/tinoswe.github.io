@@ -1,15 +1,12 @@
 ---
 layout: default
 ---
+<h2 class="current">{{ page.title }}</h2>
 
-<strong>Author:</strong> {{ page.author }}
-<br>
-<strong>Published on:</strong> {{ page.date | date: "%B %-d, %Y" }}
-<br>
-<strong>At:</strong> {{ page.date | date: "%H:%M"  }}
-<br>
-<strong>Categories:</strong> {{ page.categories }}
-<br>
-<strong>Tags:</strong> {{ page.tags }}
+<p><strong>Author:</strong> {{ page.author }}</p>
+<p><strong>Published on:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>
+<p><strong>At:</strong> {{ page.date | date: "%H:%M"  }}</p>
+<p><strong>Categories:</strong> {{ page.categories }}</p>
+<p><strong>Tags:</strong> {{ page.tags }}</p>
 
 {{ content }}
