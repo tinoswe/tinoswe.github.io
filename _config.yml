@@ -17,3 +17,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+last-modified-at:
+    date-format: '%b %d, %Y'
