@@ -1,0 +1,56 @@
+<!--<nav class="navbar">
+
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="{{ site.baseurl }}/.">
+            {% include logo.html %}
+            {% include title.html %}
+            {% include subtitle.html %}
+        </a>
+        
+        {% include navigation.html %}
+        
+    </div>
+
+</nav>-->
+
+<nav class="navbar bg-body-tertiary">
+    
+    <div class="d-flex flex-row w-100">
+  
+          <div class="flex-grow-1 align-self-center">
+            <a class="navbar-brand ms-2 fs-4 fw-semibold" href="{{ site.baseurl}}/.">{{ site.title}}</a>
+          </div>
+          
+          <!--<div class="align-self-center me-2">
+            <img src="../assets/icons/moon-stars.svg" type="button" height="20px">
+          </div>-->
+  
+          <div class="align-self-center">
+            <button class="navbar-toggler collapsed me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>
+          </button>
+          </div>
+    </div>
+  
+    <div class="d-flex flex-row w-100">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">            
+            <li class="nav-item">
+                <a href="{{ site.baseurl}}/blog"  class="nav-link text-end me-2" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ site.baseurl}}/projects"  class="nav-link text-end me-2" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ site.baseurl}}/about-me"  class="nav-link text-end me-2" href="#">About me</a>
+            </li>          
+        </ul>      
+      </div>
+    </div>
+  
+  </nav>
+  

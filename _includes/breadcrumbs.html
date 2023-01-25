@@ -1,31 +1,38 @@
-{% assign categories = include.path | split:"/" %}
+<div class="d-flex flex-row">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            {% assign categories = include.path | split:"/" %}
 
-
-{% assign filename_without_extension = categories | last | split:"." | first %}
+            {% assign filename_without_extension = categories | last | split:"." | first %}
 	
-{% if categories contains "_posts" or filename_without_extension == "index" %}
-    {% assign categories = categories | pop %}
-{% endif %}
 
-{% assign route="" %}
+            {% if categories contains "_posts" or filename_without_extension == "index" %}
+                {% assign categories = categories | pop %}
+            {% endif %}
 
-<a href="{{ '/' | absolute_url }}">home</a>
+            {% assign route="" %}
 
-{% for category in categories %}
+            <li class="breadcrumb-item"><a href="{{ '/' | absolute_url }}">home</a></li>
 
-    <span class="prompt">/</span>
+            {% for category in categories %}
 
-    {% assign route = route | append: '/' | append: category %}
-    <!--<script>console.log('route: {{ route }}');</script>-->
+        <span class="prompt"> > </span>
 
-    {% if forloop.last %}
-        {% if include.title %}
-            {{ include.title }}  
+        {% assign route = route | append: '/' | append: category %}
+        <!--<script>console.log('route: {{ route }}');</script>-->
+
+        {% if forloop.last %}
+            {% if include.title %}
+                <li class="breadcrumb-item">{{ include.title }}</li>  
+            {% else %}
+                <li class="breadcrumb-item">{{ category  }}</li>
+            {% endif %}
         {% else %}
-            {{ category  }}
+            <li class="breadcrumb-item"><a href="{{ route | absolute_url }}">{{ category }}</a></li>
         {% endif %}
-    {% else %}
-        <a href="{{ route | absolute_url }}">{{ category }}</a> 
-    {% endif %}
 
-{% endfor %}
+    {% endfor %}
+        </ol>
+    </nav>
+</div>
+
