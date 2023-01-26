@@ -5,13 +5,8 @@ title: A Google Docs template for blogging
 date: 2023-01-26 18:47
 tags: ["Google Docs", “Google Scripts”, “Markdown”, “GitHub”]
 category: tech
-excerpt_separator : <!--more-->
+excerpt: "How to use Google Docs for blogging with Jekyll on GitHub Pages? Not straightforward but cool and doable using workflows and automation. Let’s start from a Google Docs template."
 ---
-
-
- How to use Google Docs for blogging with Jekyll on GitHub Pages? Not straightforward but cool and doable using workflows and automation. Let’s start from a Google Docs template. 
-<!--more-->
-
 My goal is to be able to post here at any time with any device. My mobile is therefore my reference device, as it’s always where I am. As a lover of almost all Google products I heavily use Google Drive in my life. So.. why not using Google Docs for blogging? It would produce a nice side-effect by default, namely a backup of all my posts in the cloud. 
 
 Google Drive and GitHub
