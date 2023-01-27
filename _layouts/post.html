@@ -5,28 +5,29 @@ layout: default
 <style type="text/css">
 
     .excerpt{
-        color: darkslategrey !important;
-        font-size: xx-large;
-    }
-
-
-    #post-text p{
+        color: slategrey !important;
+        margin-bottom: 10px;
         font-size: larger;
-        line-height: 180% !important;
     }
 
     #post-text h1{
-        color: darkslategrey !important;
+        font-size: larger;
     }
 
     #post-text h2{
-        color: lightslategray !important;
+        font-size: larger;
     }
 
+    #post-text h3{
+        font-size: larger;
+    }
+
+    #post-text p{
+        line-height: 150% !important;
+    }
 
 </style>
 
-<h1 class="display-4 mb-4">{{ page.title }}</h1>
 
 <!--
 <p><strong>Author:</strong> {{ page.author }}</p>
@@ -36,7 +37,13 @@ layout: default
 <p><strong>Tags:</strong> {{ page.tags }}</p>
 -->
 
-<div class="excerpt mb-4">{{ page.excerpt }}</div>
+<h2 class="mb-2">
+    {{ page.title }}
+</h2>
+
+<div class="excerpt">
+    {{ page.excerpt }}
+</div>
 
 <div id="post-text">
     {{ page.content }}

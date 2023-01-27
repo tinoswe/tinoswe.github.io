@@ -32,7 +32,7 @@ Where to start?
 After the exploration of a bunch of automation solutions (GitHub actions, Zapier and surrogates) I ended up looking into Google Scripts (I told you I love Google products, right?). I was able to create my own custom markdown exporter and have the functionality available in any Google Doc with a few lines of JavaScript code.There’s a lot of extremely useful material out there and I should give credit to the right people at some point. The starting point of all this is going to be a template to write my posts. 
 
 Why a Google Doc template?
---------------------------
+==========================
 
 I need a template because the article has to be converted into a Jekyll compatible markdown. Which has a header and some fields that I need to populate in order for Jekyll to process and render the post properly on the webpage.
 
