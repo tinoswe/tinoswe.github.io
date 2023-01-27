@@ -37,12 +37,34 @@ layout: default
 <p><strong>Tags:</strong> {{ page.tags }}</p>
 -->
 
+<div class="d-flex flex-row">
+    <img src="{{ site.baseurl }}/assets/icons/bookmark.svg">
+    <div class="ms-1">
+        {{ page.category }}
+    </div>
+    <img src="{{ site.baseurl }}/assets/icons/tags.svg" class="ms-2">
+    <div class="ms-1">
+        {{ page.tags | sort | join: ", " }}
+    </div>
+</div>
+
 <h2 class="mb-2">
     {{ page.title }}
 </h2>
 
 <div class="excerpt">
     {{ page.excerpt }}
+</div>
+
+<div class="d-flex flex-row mb-3">
+        <img src="{{ site.baseurl }}/assets/icons/pen.svg">
+        <div class="ms-1">
+            {{ page.author }}
+        </div>
+        <img src="{{ site.baseurl }}/assets/icons/calendar3.svg" class="ms-2">
+        <div class="ms-1">
+            {{ page.date | date: "%b %d, %Y"}}
+        </div>
 </div>
 
 <div id="post-text">

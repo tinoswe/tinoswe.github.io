@@ -3,7 +3,7 @@ layout: post
 author: tinoSwe
 title: Why Google Docs is optimal for blogging
 date: 2023-01-18 18:04
-tags: "Google Docs"
+tags: ["Google Docs"]
 category: tech
 excerpt: "Google Docs is a nice alternative to Obsidian for my markdown posts. But it requires some extra work."
 ---
