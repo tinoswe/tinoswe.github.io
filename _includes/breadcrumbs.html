@@ -1,7 +1,7 @@
 
 <div class="d-flex flex-row">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
+        <ol class="breadcrumb m-0">
             {% assign categories = include.path | split:"/" %}
 
             {% assign filename_without_extension = categories | last | split:"." | first %}
