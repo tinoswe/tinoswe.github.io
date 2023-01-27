@@ -1,3 +1,4 @@
+
 <div class="d-flex flex-row">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -12,23 +13,27 @@
 
             {% assign route="" %}
 
-            <li class="breadcrumb-item"><a href="{{ '/' | absolute_url }}">home</a></li>
+            <li class="breadcrumb-item">
+                <a href="{{ '/' | absolute_url }}">
+                    <img src="{{ site.baseurl}}/assets/icons/house.svg" type="button">
+                </a>
+            </li>
 
             {% for category in categories %}
 
-        <span class="prompt"> > </span>
+        <span class="mt-auto"> / </span>
 
         {% assign route = route | append: '/' | append: category %}
         <!--<script>console.log('route: {{ route }}');</script>-->
 
         {% if forloop.last %}
             {% if include.title %}
-                <li class="breadcrumb-item">{{ include.title }}</li>  
+                <li class="breadcrumb-item mt-auto">{{ include.title }}</li>  
             {% else %}
-                <li class="breadcrumb-item">{{ category  }}</li>
+                <li class="breadcrumb-item mt-auto">{{ category  }}</li>
             {% endif %}
         {% else %}
-            <li class="breadcrumb-item"><a href="{{ route | absolute_url }}">{{ category }}</a></li>
+            <li class="breadcrumb-item mt-auto"><a href="{{ route | absolute_url }}">{{ category }}</a></li>
         {% endif %}
 
     {% endfor %}

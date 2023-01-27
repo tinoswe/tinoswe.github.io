@@ -4,7 +4,7 @@ author: tinoSwe
 title: Amazing Obsidian
 date: 2023-01-14 17:37
 tags: Obsidian
-categories: tech
+category: tech
 excerpt: "Some insights on Obsidian: an open source cross platform markdown editor."
 ---
 # What is Obsidian?
