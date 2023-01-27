@@ -11,12 +11,12 @@
             <div class="card-body p-0">
                 <h5 class="card-title mb-1">{{ post.title }}</h5>
                 <p class="card-text small mb-0">{{ post.excerpt }}</p>
-                <div class="d-flex flex-row justify-content-start align-items-center">
+                <div class="d-flex flex-row justify-content-between align-items-center">
                     <div>
                         <a class="btn btn-sm btn-outline-secondary border-0 p-2 ps-0 m-0 disabled">by {{ post.author }} on {{ post.date | date: "%b %d, %Y"}}</a>
                     </div>
                     <div>
-                        <a href="{{ base_url }}{{ post.url }}" class="btn btn-sm btn-outline-success border-0 p-2 m-0 ms-4">Read more...</a>
+                        <a href="{{ base_url }}{{ post.url }}" class="btn btn-sm btn-outline-success border-0 p-2 m-0">Read more...</a>
                     </div>
                 </div>
             </div>
