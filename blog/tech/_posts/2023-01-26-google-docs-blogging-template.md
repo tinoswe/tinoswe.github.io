@@ -3,7 +3,7 @@ layout: post
 author: tinoSwe
 title: A Google Docs template for blogging
 date: 2023-01-26 18:47
-tags: ["Google Docs", “Google Scripts”, “Markdown”, “GitHub”]
+tags: ["Google Docs", "Google Scripts", "Markdown", "GitHub"]
 category: tech
 excerpt: "How to use Google Docs for blogging with Jekyll on GitHub Pages? Not straightforward but cool and doable using workflows and automation. Let’s start from a Google Docs template."
 ---
