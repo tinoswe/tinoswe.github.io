@@ -1,25 +1,26 @@
 <ul style="list-style-type: none; padding-left: 0px;">
     {% for post in site.posts %}
-        <li class="pb-2">
-            <!--
-            <div>{{ post.date | date: "%b %d, %y"}}:</div>
-                <a href="{{ base_url }}{{ post.url }}">{{ post.title }}</a>
-            <div class="badge bg-primary">{{ post.category}}</div>
-            -->
-            <div class="card">
-                <div class="card-header">
-                    <div class="d-flex justify-content-between">
-                        <div>{{ post.category}}</div>
-                        <div>{{ post.date | date: "%b %d, %Y"}}</div>
+        <li class="pb-4">
+            <div class="card border-0">
+                <!--<div class="card-header border-0 p-0 bg-transparent">
+                        <div class="d-flex justify-content-start">
+                            <div class="badge text-bg-success me-2 disabled p-1 m-0" style="border-radius:0px; font-size: small; font-weight: lighter;">
+                                {{ post.category}}
+                            </div>
+                        </div>-->
+            <div class="card-body p-0">
+                <h5 class="card-title mb-1">{{ post.title }}</h5>
+                <p class="card-text small mb-0">{{ post.excerpt }}</p>
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                    <div>
+                        <a class="btn btn-sm btn-outline-secondary border-0 p-0 m-0 disabled">by {{ post.author }} on {{ post.date | date: "%b %d, %Y"}}</a>
+                    </div>
+                    <div>
+                        <a href="{{ base_url }}{{ post.url }}" class="btn btn-sm btn-outline-success border-0 p-1 m-0">Read more...</a>
                     </div>
                 </div>
-                <div class="card-body">
-                  <h5 class="card-title">{{ post.title }}</h5>
-                  <p class="card-text small">{{ post.excerpt }}</p>
-                  <a href="{{ base_url }}{{ post.url }}" class="btn btn-sm btn-outline-primary">Read</a>
-                </div>
             </div>
-
+            </div>
         </li>
     {% endfor %}
 </ul>
