@@ -2,10 +2,14 @@
 layout: default
 title: home
 ---
-{{ site.description }}
+<div class="ms-2 me-2">
 
-<!--
-### Latest posts
+    {{ site.description }}
 
-{% include latest_post_list.html %}
--->
+    <!--
+    ### Latest posts
+
+    {% include latest_post_list.html %} 
+    -->
+
+</div>
