@@ -11,7 +11,7 @@
 
   <body class="d-flex flex-column" style="height: 100vh;">
 
-    <div class="container">
+    <div class="container p-0">
       <div class="d-flex flex-row justify-content-center">
         <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
           
@@ -21,22 +21,19 @@
     
           {{ content }}
     
+        </div>
+      </div>  
+    </div>
+
+    <div class="mt-auto">
+      <div class="container p-0">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
+            {% include footer.html %}
+          </div>
+        </div>  
       </div>
-    </div>  
-  </div>
-
-  <div class="mt-auto p-2">
-    <div class="container">
-      <div class="d-flex flex-row justify-content-center">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
-
-    {% include footer.html %}
-  </div>
-</div>  
-</div>
-
-  </div>
-
+    </div>
 
     <script src="{{ site.baseurl }}/assets/js/bootstrap-5.3.0/bootstrap.bundle.min.js"></script>
 
