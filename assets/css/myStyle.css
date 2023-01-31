@@ -1,3 +1,12 @@
+:root {
+  --techCat: #ff7373 ;
+  --tSweCat: #2acaea   ;
+}
+
+a {
+  color: darkolivegreen;
+}
+
 .breadcrumb-item{
     font-size: smaller;
 }
@@ -61,4 +70,23 @@
     box-shadow: none;
     border: none;
 }
+
+.tech-color{
+  color: var(--techCat);
+}
+
+.tinoSwe-color{
+  color: var(--tSweCat);
+}
+
+.grid-item { 
+  width: 100%; 
+}
+
+.btn-tech{
+}
+
+.btn-tinoswe{
+}
+
 

@@ -1,9 +1,26 @@
-<ul style="list-style-type: none; padding-left: 0px;">
+<p>
+    <div class="d-flex flex-row justify-content-center">
+        <div class="button-group filters-button-group justify-content-center">
+            <button class="btn btn-sm active" type='button' data-filter="*">all</button>
+            <button class="btn btn-sm btn-tech" type='button' data-filter=".tech">tech</button>
+            <button class="btn btn-sm btn-tinoswe" type='button' data-filter=".tinoSwe">tinoSwe</button>
+        </div>
+    </div>
+</p>
+
+<ul class="grid" data-isotope='{ "itemSelector": ".grid-item", "layoutMode": "fitRows" }' style="list-style-type: none; padding-left: 0px;">
     {% for post in site.posts %}
-        <li class="">
+        <li class="grid-item {{ post.category }}">
             <div class="card border-0">
                 <div class="card-body p-0">
-                    <h5 class="card-title mb-1">{{ post.title }}</h5>
+                    <div class="d-flex flex-row align-items-start">
+                            <div>
+                                <h5 class="card-title mb-1">{{ post.title }}</h5>
+                            </div>
+                            <div class="d-flex flex-column align-self-center small">
+                                <i class="bi bi-circle-fill {{ post.category }}-color ms-2"></i>
+                        </div>
+                    </div>
                     <p class="card-text small mb-0">{{ post.excerpt }}</p>
                     <p class="card-text small mb-0"><a href="{{ base_url }}{{ post.url }}" class="">Read more </a></p>
                     
@@ -18,3 +35,44 @@
         </li>
     {% endfor %}
 </ul>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+    // init Isotope
+    var iso = new Isotope( '.grid', {
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+    });
+
+    // bind filter button click
+    var filtersElem = document.querySelector('.filters-button-group');
+    
+    filtersElem.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+        }
+        var filterValue = event.target.getAttribute('data-filter');
+        // use matching filter function
+        iso.arrange({ filter: filterValue });
+    });
+
+    // change is-checked class on buttons
+    var buttonGroups = document.querySelectorAll('.button-group');
+    for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
+        var buttonGroup = buttonGroups[i];
+        radioButtonGroup( buttonGroup );
+    }   
+
+    function radioButtonGroup( buttonGroup ) {
+        buttonGroup.addEventListener( 'click', function( event ) {
+        // only work with buttons
+        if ( !matchesSelector( event.target, 'button' ) ) {
+            return;
+        }
+        buttonGroup.querySelector('.active').classList.remove('active');
+        event.target.classList.add('active');
+    });
+}
+
+</script>

@@ -48,7 +48,7 @@ layout: default
 
 <div class="ms-2 me-2">
 <div class="d-flex flex-row">
-    <img src="{{ site.baseurl }}/assets/icons/tags.svg">
+    <i class="bi bi-tags {{page.category}}-color"></i>
     <div class="ms-1">
         <small>{{ page.tags | sort | join: ", " }}</small>
     </div>
@@ -63,11 +63,11 @@ layout: default
 </div>
 
 <div class="d-flex flex-row mb-2">
-        <img src="{{ site.baseurl }}/assets/icons/pen.svg">
+        <i class="bi bi-pen {{page.category}}-color"></i>
         <div class="ms-1">
             <small>{{ page.author }}</small>
         </div>
-        <img src="{{ site.baseurl }}/assets/icons/calendar3.svg" class="ms-2">
+        <i class="bi bi-calendar3 {{page.category}}-color ms-2"></i>
         <div class="ms-1">
             <small>{{ page.date | date: "%b %d, %Y"}}</small>
         </div>
