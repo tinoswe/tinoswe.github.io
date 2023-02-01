@@ -1,9 +1,9 @@
 <p>
     <div class="d-flex flex-row justify-content-center">
         <div class="button-group filters-button-group justify-content-center">
-            <button class="btn btn-sm" type='button' data-filter="*">all</button>
-            <button class="btn btn-sm btn-tech" type='button' data-filter=".tech">tech</button>
-            <button class="btn btn-sm btn-tinoswe" type='button' data-filter=".tinoSwe">tinoSwe</button>
+            <button id="btnAll" class="btn btn-sm" type='button' data-filter="*">all</button>
+            <button id="btnTech" class="btn btn-sm btn-tech" type='button' data-filter=".tech">tech</button>
+            <button id="btnTinoSwe" class="btn btn-sm btn-tinoswe" type='button' data-filter=".tinoSwe">tinoSwe</button>
         </div>
     </div>
 </p>
@@ -12,6 +12,15 @@
     {% for post in site.posts %}
         <li class="grid-item {{ post.category }}">
             <div class="card border-0">
+
+                <div class="card-header border-0 p-0 bg-transparent">
+                    
+                    <div class="small fst-italic">
+                        by {{ post.author }} on {{ post.date | date: "%b %d, %Y"}}
+                    </div>
+
+                </div>
+
                 <div class="card-body p-0">
                     <div class="d-flex flex-row align-items-start">
                             <div>
@@ -24,32 +33,43 @@
                     <p class="card-text small mb-0">{{ post.excerpt }}</p>
                     <p class="card-text small mb-0"><a href="{{ base_url }}{{ post.url }}" class="">Read more </a></p>
                     
-                    <div class="d-flex flex-row justify-content-start align-items-center">
-                        <div>
-                            <a class="btn btn-sm btn-outline-secondary border-0 p-1 ps-0 m-0 disabled">by {{ post.author }} on {{ post.date | date: "%b %d, %Y"}}</a>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <hr>
+            <hr style="color: gray;">
         </li>
     {% endfor %}
 </ul>
 
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // change active class on buttons
-        var buttonGroups = document.querySelectorAll('.button-group');
-        for ( var i=0, len = buttonGroups.length; i < len; i++ ) {
-            var buttonGroup = buttonGroups[i];
-            console.log(buttonGroup);
 
-            for ( var j=0, len = buttonGroup.length; j < len; j++ ) {
-                console.log(buttonGroup[j]);
-            }
+    document.addEventListener("DOMContentLoaded", function(){
 
-        }   
+        var filterValue = '';
+
+        if ('{{ include.content }}' === 'blog') {
+            //console.log('external paramter: ' + '{{ include.content }}');
+            document.getElementById('btnAll').classList.add('active');
+            //console.log('{{ include.content }}' + ' button set to active.');
+
+            filterValue = document.getElementById('btnAll').getAttribute('data-filter');
+
+        } else if ('{{ include.content }}' === 'tech') {
+            document.getElementById('btnTech').classList.add('active');
+            //console.log('{{ include.content }}' + ' button set to active.');
+
+            filterValue = document.getElementById('btnTech').getAttribute('data-filter');
+
+        } else {
+            document.getElementById('btnTinoSwe').classList.add('active');
+            //console.log('{{ include.content }}' + ' button set to active.');
+
+            filterValue = document.getElementById('btnTinoSwe').getAttribute('data-filter');
+
+        }
+
+        iso.arrange({ filter: filterValue });
+
     });
 
     // init Isotope
@@ -80,13 +100,22 @@
 
     function radioButtonGroup( buttonGroup ) {
         buttonGroup.addEventListener( 'click', function( event ) {
-        // only work with buttons
-        if ( !matchesSelector( event.target, 'button' ) ) {
-            return;
-        }
-        buttonGroup.querySelector('.active').classList.remove('active');
-        event.target.classList.add('active');
-    });
-}
+            // only work with buttons
+            if ( !matchesSelector( event.target, 'button' ) ) {
+                return;
+            }
+            try{
+                buttonGroup.querySelector('.active').classList.remove('active');
+            }
+            catch{
+                console.log('no active button in page')
+            }
+            finally{
+                event.target.classList.add('active');
+            }
+        });
+    }
+
+
 
 </script>

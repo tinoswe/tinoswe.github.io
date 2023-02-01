@@ -1,10 +1,11 @@
 :root {
-  --techCat: #ff7373 ;
-  --tSweCat: #2acaea   ;
+  --techCat: #ff7373;
+  --tSweCat: #2acaea;
+  --tLink: #0e2f44;
 }
 
 a {
-  color: darkolivegreen;
+  color: var(--tLink);
 }
 
 .breadcrumb-item{
