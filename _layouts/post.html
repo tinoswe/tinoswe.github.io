@@ -28,41 +28,24 @@ layout: default
 
 </style>
 
-
-<!--
-<p><strong>Author:</strong> {{ page.author }}</p>
-<p><strong>Published on:</strong> {{ page.date | date: "%B %-d, %Y" }}</p>
-<p><strong>At:</strong> {{ page.date | date: "%H:%M"  }}</p>
-<p><strong>Categories:</strong> {{ page.categories }}</p>
-<p><strong>Tags:</strong> {{ page.tags }}</p>
--->
-
-<!--
-    <div class="d-flex flex-row">
-    <img src="{{ site.baseurl }}/assets/icons/bookmark.svg">
-    <div class="ms-1">
-        {{ page.category }}
-    </div>
-</div>
--->
-
 <div class="ms-2 me-2">
-<div class="d-flex flex-row">
-    <i class="bi bi-tags {{page.category}}-color"></i>
-    <div class="ms-1">
-        <small>{{ page.tags | sort | join: ", " }}</small>
+
+    <div class="d-flex flex-row">
+        <i class="bi bi-tags {{page.category}}-color"></i>
+        <div class="ms-1">
+            <small>{{ page.tags | sort | join: ", " }}</small>
+        </div>
     </div>
-</div>
 
-<h2 class="mb-2">
-    {{ page.title }}
-</h2>
+    <h2 class="mb-2">
+        {{ page.title }}
+    </h2>
 
-<div class="excerpt">
-    {{ page.excerpt }}
-</div>
+    <div class="excerpt">
+        {{ page.excerpt }}
+    </div>
 
-<div class="d-flex flex-row mb-2">
+    <div class="d-flex flex-row mb-2">
         <i class="bi bi-pen {{page.category}}-color"></i>
         <div class="ms-1">
             <small>{{ page.author }}</small>
@@ -71,9 +54,10 @@ layout: default
         <div class="ms-1">
             <small>{{ page.date | date: "%b %d, %Y"}}</small>
         </div>
-</div>
+    </div>
 
-<div id="post-text">
-    {{ page.content }}
-</div>
+    <div id="post-text">
+        {{ page.content }}
+    </div>
+
 </div>
