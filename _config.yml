@@ -17,3 +17,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+sass:
+    sass_dir: _sass
+    style: compressed
