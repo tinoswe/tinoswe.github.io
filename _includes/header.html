@@ -15,13 +15,24 @@
             </a>
         </div>
 
-        <div>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <div class="d-flex flex-row justify-content-between align-items-center">
+          <div>
+            <i class="bi bi-rss fs-5 me-1" type='button' href='{{ site.baseurl}}/feed.xml'></i>
+          </div>          
+          <!--<div>
+            <i class="bi bi-moon-stars fs-5 me-1"></i>
+          </div>-->
+          <div>
+            <button class="navbar-toggler collapsed border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="icon-bar top-bar"></span>
+              <!--<span class="icon-bar top-bar"></span>
               <span class="icon-bar middle-bar"></span>
-              <span class="icon-bar bottom-bar"></span>
+              <span class="icon-bar bottom-bar"></span>-->
+              <span class="navbar-toggler-icon"></span>
             </button>
+            
+          </div>
+        
         </div>  
 
   </div>
